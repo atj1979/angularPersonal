@@ -1,0 +1,14 @@
+{
+  "name": "angPer",
+  "version": "1.0.0",
+  "description": "A personal App to demonstrate some knowledge of angular/express/node",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Tony Johnson",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.12.3"
+  }
+}

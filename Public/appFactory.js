@@ -1,5 +1,6 @@
 angular.module('tonyApp.factory', [])
-//$http is native to angular
+//.factory('factoryName', function(dependancy injection){}). other chained factories
+// $http is native to angular
 	.factory('Data', function ($http) {
 		var getTheData = function (){		
 	    return $http({
@@ -13,6 +14,7 @@ angular.module('tonyApp.factory', [])
 	      console.error('get data did not work - good luck with that', error);
 	    });
 		};
+		//factories must always return this object for some reason otherwise some error
 		return {
 			getTheData:getTheData
 		};

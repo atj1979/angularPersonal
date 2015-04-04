@@ -1,10 +1,11 @@
+//anglular.module('modulename', [dependancy modules here])
 angular.module('tonyApp', ['tonyApp.factory'])
-// /*Factorys and other dependancies (dependancy injection)*/
+//other dependancies .controller('controllername',function (dependancy injection)
   .controller('tonyController', function (Data){
+    // this is the 'controller as controller thing - otherwise we put stuff on $scope'
     var self = this;
-    // self.theData = {['these', 'are', 'the', 'things', 'that', 'are', 'served', 'up', 'from', 'the', 'server'];
+  
   //get data from server - send it to a factory to get the data
-
   //results are the results from the function call factory.getTheData();
     self.getFromServer = function (){
       Data.getTheData()

@@ -13,17 +13,22 @@ var express= require('express');
 var app = express();
 
 //Developer Defined
+// app.use('/', express.static(__dirname));
+app.use('/', express.static(__dirname + '/public'));
+
+
+var theData = ['these', 'are', 'the', 'things', 'that', 'are', 'served', 'up', 'from', 'the', 'server'];
+app.get('/data', function(req, res){
 
 
 
-app.get('/', function(req, res){
-  console.log("serving up stuff from here.");
-  console.log(req.route.path);
-  console.log(req.url);
-  console.log(req.method);
-  
-  res.send(['these', 'are', 'the', 'things', 'that', 'my server', 'is', 'sending', 'back']);
+
+  res.send(theData);
+
+
 
 });
+
+
 
 app.listen(8000);

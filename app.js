@@ -17,7 +17,7 @@ var app = express();
 app.use('/', express.static(__dirname + '/public'));
 
 
-var theData = ['these', 'are', 'the', 'things', 'that', 'are', 'served', 'up', 'from', 'the', 'server'];
+var theData = ['these', 'are',  'things', 'that', 'are', 'served', 'up', 'from', 'the', 'server'];
 app.get('/data', function(req, res){
 
 

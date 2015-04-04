@@ -4,14 +4,14 @@
 
 <body>
 	<div ng-app="tonyApp">
-  <div ng-controller="tonyController as tony">
-    <button ng-click="tony.getFromServer()">Get Data</button>
-    <div ng-repeat="value in tony.results">
-      {{ value }}
-    </div>
-    <div>Returned data {{tony.results}}</div>
-	    <p>This is something on the page {{ tony.something() }}</p>
-  </div>
+		<div ng-controller="tonyController as tony">
+		  <button ng-click="tony.getFromServer()">Get Data</button>
+		  <div ng-repeat="value in tony.results track by $index">
+		    Some Value from Server {{ value }}
+		  </div>
+		  <div>Returned data {{tony.results}}</div>
+		    <p>This is something on the page {{ tony.something() }}</p>
+		</div>
   </div>
 
 
